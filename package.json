@@ -1,0 +1,22 @@
+{
+  "name": "6.3-mongoose",
+  "version": "1.0.0",
+  "description": "mongoose overview",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "dietz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.7"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "supertest": "^3.0.0"
+  }
+}

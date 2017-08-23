@@ -1,0 +1,14 @@
+<h1>Things Todo!</h1>
+
+<div class="well">
+  <form action="/todo/" method="POST">
+    <input type="text" name="title" placeholder="Todo Title">
+    <input type="submit" class="btn btn-primary btn-lg" value="Add Todo"/>
+  </form>
+</div>
+
+<ul>
+  {{#each todos}}
+    <li>{{title}} <a href="/todo/{{_id}}/delete/" class="btn btn-danger">Delete</a></li>
+  {{/each}}
+</ul>
