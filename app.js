@@ -7,7 +7,8 @@ var router = require('./routes.js');
 
 
 var app = express();
-mongoose.connect('mongodb://localhost:27017/test');
+var database = process.env.MONGODB_URI || 'mongodb://localhost:27017/test';
+mongoose.connect(database);
 
 app.engine('handlebars', handlebars({'defaultLayout': 'base'}));
 app.set('view engine', 'handlebars');
