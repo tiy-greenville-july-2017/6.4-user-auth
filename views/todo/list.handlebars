@@ -1,14 +1,18 @@
-<h1>Things Todo!</h1>
+<h1>
+  Things Todo!
+  <a href="/todo/add/" class="pull-right btn btn-success">Add Todo</a>
+</h1>
 
-<div class="well">
-  <form action="/todo/" method="POST">
-    <input type="text" name="title" placeholder="Todo Title">
-    <input type="submit" class="btn btn-primary btn-lg" value="Add Todo"/>
-  </form>
-</div>
+<br><br>
 
-<ul>
+<ul class="list-group">
   {{#each todos}}
-    <li>{{title}} <a href="/todo/{{_id}}/delete/" class="btn btn-danger">Delete</a></li>
+    <li class="list-group-item clearfix">
+      {{title}}
+      <span class="pull-right">
+        <a href="/todo/{{_id}}/edit/" class="btn btn-primary">Edit</a>
+        <a href="/todo/{{_id}}/delete/" class="btn btn-danger">Delete</a>
+      </span>
+    </li>
   {{/each}}
 </ul>

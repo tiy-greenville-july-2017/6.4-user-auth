@@ -12,6 +12,10 @@ module.exports = function(app){
 
   todoRouter.get('/', TodoController.list);
   todoRouter.post('/', TodoController.add);
+  todoRouter.get('/add/', TodoController.form);
+  // todoRouter.get('/:id/', TodoController.detail);
+  todoRouter.post('/:id/', TodoController.edit);
+  todoRouter.get('/:id/edit/', TodoController.form);
   todoRouter.get('/:id/delete/', TodoController.delete);
 
   app.use('/', brochureRouter);
